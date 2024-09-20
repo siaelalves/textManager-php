@@ -1,11 +1,21 @@
 <?php
+/*
+ © 2024 Copyright, Siael Alves
+*/
 namespace text ;
 
 class writing {
 
+ /** String ou texto desejado para manusear. */
  public string $string ;
 
- public function __construct ( $string ) {
+
+
+ /**
+  * Função construtora.
+  * @param string $string String ou texto desejado para manusear.
+  */
+ public function __construct ( string $string ) {
 
   $this->string = $string ;
 
@@ -105,6 +115,21 @@ class writing {
 
   return $step4;
   
+ }
+
+ /**
+  * Retorna um número especificado de palavras dentro de uma string contando a partir da primeira palavra.
+  * @param int $count Número de palavras a retornar.
+  * @return string Retorna uma string contendo apenas as primeiras $count palavras da string original.
+  */
+ public function get_words ( int $count ) : string {
+
+  $words = explode ( " " , $this->string , $count ) ;
+  
+  $words = array_slice ( $words , 0 , $count ) ;
+
+  return implode ( " " , $words ) ;
+
  }
 
 }
