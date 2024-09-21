@@ -4,6 +4,9 @@
 */
 namespace text ;
 
+/**
+ * Objeto que representa a escrita e a impressão de texto na tela.
+ */
 class writing {
 
  /** String ou texto desejado para manusear. */
