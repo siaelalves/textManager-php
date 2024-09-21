@@ -9,14 +9,14 @@ namespace text ;
  */
 class writing {
 
- /** String ou texto desejado para manusear. */
+ /** String ou texto desejado para manipular. */
  public string $string ;
 
 
 
  /**
   * Função construtora.
-  * @param string $string String ou texto desejado para manusear.
+  * @param string $string String ou texto desejado para manipular.
   */
  public function __construct ( string $string ) {
 
