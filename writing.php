@@ -31,7 +31,7 @@ class writing {
   * @return string Retorna o texto corrigido com a acentuação correta. Se houver um 
   * argumento incorreto, retornará uma string  vazia;
   **/
- public function correct_font ( string $step = "" , bool $all_caps ) : string {
+ public function correct_font ( string $step , bool $all_caps ) : string {
   
   $small_letters = array ( "á","é","í","ó","ú","ç","â","ê","ô","à","ã","õ" ) ;
   $big_letters = array ( "Á","É","Í","Ó","Ú","Ç","Â","Ê","Ô","À","Ã","Õ" ) ;
