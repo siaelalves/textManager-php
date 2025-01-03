@@ -1,22 +1,22 @@
 <?php
-/*
- © 2024 Copyright, Siael Alves
-*/
 namespace text ;
 
 /**
  * Objeto que representa a escrita e a impressão de texto na tela.
+ * 
+ * @author Siael Alves
+ * @copyright (c) Copyright 2024, Siael Alves
  */
 class writing {
 
- /** String ou texto desejado para manipular. */
+ /** @var string $string String ou texto que se pretende manipular. */
  public string $string ;
 
 
 
  /**
   * Função construtora.
-  * @param string $string String ou texto desejado para manipular.
+  * @param string $string String ou texto que se pretende manipular.
   */
  public function __construct ( string $string ) {
 
@@ -26,8 +26,8 @@ class writing {
 
  /**
   * Corrige a acentuação em letras maiúsculas,
-  * impedindo que "RÓTULOS" apareça como "RóTULOS", por exemplo.
-  * @param string $string Define se irá corrigir as letras maiúsculas ou minúsculas.
+  * impedindo, por exemplo, que "RÓTULOS" apareça como "RóTULOS", por exemplo.
+  * @param string $step Define se irá corrigir as letras maiúsculas ou minúsculas.
   * @return string Retorna o texto corrigido com a acentuação correta. Se houver um 
   * argumento incorreto, retornará uma string  vazia;
   **/
@@ -121,20 +121,31 @@ class writing {
  }
 
  /**
-  * Retorna um número especificado de palavras dentro de uma string contando a partir da primeira palavra.
-  * @param int $count Número de palavras a retornar.
-  * @return string Retorna uma string contendo apenas as primeiras $count palavras da string original.
+  * Retorna um número especificado de palavras dentro de uma string.
+  * @param int $start Índice inicial de onde se começa a primeira palavra desejada. 
+  * O padrão é 0 (zero), ou seja a primeira palavra.
+  * @param int $count Número de palavras a retornar. Se for 0, retorna o número total de palavras.
+  * @param bool $return_array Se for true, retorna um array com as palavras. Se for false, 
+  * retorna uma string.
+  * @return string Retorna uma string contendo apenas as primeiras $count palavras da string original, ou 
+  * uma array com as palavras.
   */
- public function get_words ( int $count ) : string {
+ public function word_slice ( int $start = 0 , int $count = 0 , bool $return_array = false ) : string|array {  
 
-  $words = explode ( " " , $this->string , $count ) ;
+  $words = explode ( " " , $this->string ) ;
   
-  $words = array_slice ( $words , 0 , $count ) ;
+  if ( $count == 0 ) {
+   return count ( $words ) ;
+  }
+
+  $words = array_slice ( $words , $start , $count ) ;
+
+  if ( $return_array == true ) {
+   return $words ;
+  }
 
   return implode ( " " , $words ) ;
 
  }
 
 }
-
-?>
