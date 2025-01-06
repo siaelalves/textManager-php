@@ -1,6 +1,6 @@
 # Text Manager PHP
 
-**Versão** 0.1.0
+**Versão** 0.1.3
 
 **Objetivo** Organiza funções úteis para manipular strings.
 
@@ -61,10 +61,12 @@ Abaixo, está o mapa de classes e propriedades de Routes Manager.
     * **writing [ classe ]**
         * PROPRIEDADES
             * string [ propriedade:string ]
+            * chars [ propriedade:int]
+            * words [ propriedade:int]
         * MÉTODOS
             * correct_font ( )
             * remove_accents ( )
-            * remove_punctuation ( )
+            * replace_punctutation ( )
             * to_url ( )
             * word_slice ( )
 
@@ -74,3 +76,13 @@ Atualmente, o projeto possui os seguintes bugs:
 
 - As funções não possuem tratamento de erros eficiente, expondo dados sensíveis e a própria estrutura do website;
    - Para dirimir esse bug, em versões futuras será criado a classe **Exception** para tratamento de erros;
+
+## Histórico
+
+0.1.3:
+- Renomeado método `remove_punctuation ( )` para `replace_punctutation ( )`;
+- Melhorados comentários e explicações sobre os métodos;
+- Adicionadas 2 novas propriedades: `chars` e `words`;
+
+0.1.0:
+- Lançamento inicial;
