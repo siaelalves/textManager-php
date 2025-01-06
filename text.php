@@ -7,4 +7,4 @@ namespace text ;
 /**
  * Classe responsável por agrupar funções para escrita de texto. 
  */
-require "text/writing.php" ;
+require "writing.php" ;
