@@ -1,5 +1,5 @@
 <?php
-/* © Copyright 2024, Siael Alves */
+/* © Copyright 2024 - 2025, Siael Alves */
 
 /* Conjunto de classes e métodos usadas para manipular texto. */
 namespace text ;

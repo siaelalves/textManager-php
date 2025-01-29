@@ -5,7 +5,7 @@ namespace text ;
  * Objeto que representa a escrita e a impressão de texto na tela.
  * 
  * @author Siael Alves
- * @copyright (c) Copyright 2024, Siael Alves
+ * @copyright (c) Copyright 2024 - 2025, Siael Alves
  */
 class writing {
 
